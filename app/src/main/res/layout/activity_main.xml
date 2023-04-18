@@ -1,0 +1,230 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/background_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background_noite"
+    android:orientation="vertical"
+    android:padding="20dp"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/txt_cidade"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="25dp"
+        android:layout_toEndOf="@id/img_localizacao"
+        android:gravity="center"
+        android:text="Cidade"
+        android:textSize="24sp"
+        android:textStyle="bold" />
+
+
+    <ImageView
+        android:id="@+id/img_localizacao"
+        android:layout_width="35dp"
+        android:layout_height="35dp"
+        android:layout_gravity="start"
+        android:src="@drawable/ic_location_on_24" />
+
+    <EditText
+        android:id="@+id/cityFinder"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/txt_cidade"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="8dp"
+        android:autofillHints="name"
+        android:backgroundTint="@color/white"
+        android:drawableEnd="@drawable/ic_baseline_search_24"
+        android:hint="Digite uma cidade"
+        android:textAlignment="center"
+        android:textColor="@color/white" />
+
+    <ImageView
+        android:id="@+id/img_icon_clima"
+        android:layout_width="170dp"
+        android:layout_height="170dp"
+        android:layout_below="@id/cityFinder"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="20dp"
+        android:src="@drawable/overcast" />
+
+    <TextView
+        android:id="@+id/txt_condicao"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/img_icon_clima"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:gravity="center"
+        android:text="@string/txt_condicao"
+        android:textSize="18sp" />
+
+
+    <TextView
+        android:id="@+id/txt_temperatura"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/txt_condicao"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="6dp"
+        android:gravity="center"
+        android:text="@string/txt_temperatura"
+        android:textSize="80sp" />
+
+
+    <RelativeLayout
+        android:id="@+id/rl_detalhes"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:layout_below="@id/txt_temperatura"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/container"
+        android:gravity="center"
+        android:padding="16dp">
+
+        <ImageView
+            android:id="@+id/img_sensacao_termica"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:src="@drawable/temperatura"
+            app:tint="@color/white" />
+
+        <TextView
+            android:id="@+id/txt_sensacao_termica"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="3dp"
+            android:layout_marginTop="3dp"
+            android:layout_marginEnd="3dp"
+            android:layout_marginBottom="3dp"
+            android:layout_toEndOf="@id/img_sensacao_termica"
+            android:text="@string/txt_sensacao_termica"
+            android:textSize="16sp" />
+
+
+        <TextView
+            android:id="@+id/txt_valor_sensacao_term"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/txt_sensacao_termica"
+            android:layout_margin="3dp"
+            android:layout_toEndOf="@id/img_sensacao_termica"
+            android:text="@string/txt_valor_sensacao_term"
+            android:textSize="20sp" />
+
+        <ImageView
+            android:id="@+id/img_umidade"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_marginStart="170dp"
+            android:src="@drawable/umidade"
+            app:tint="@color/white" />
+
+        <TextView
+            android:id="@+id/txt_umidade"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="3dp"
+            android:layout_marginTop="3dp"
+            android:layout_marginEnd="3dp"
+            android:layout_marginBottom="3dp"
+            android:layout_toEndOf="@id/img_umidade"
+            android:text="@string/txt_umidade"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/txt_valor_umidade"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/txt_umidade"
+            android:layout_marginStart="3dp"
+            android:layout_marginTop="3dp"
+            android:layout_marginEnd="3dp"
+            android:layout_marginBottom="3dp"
+            android:layout_toEndOf="@id/img_umidade"
+            android:text="@string/txt_valor_umidade"
+            android:textSize="20sp" />
+
+        <ImageView
+            android:id="@+id/img_pressao"
+            android:layout_width="45dp"
+            android:layout_height="45dp"
+            android:layout_below="@id/img_sensacao_termica"
+            android:layout_marginTop="40dp"
+            android:src="@drawable/pressao"
+            app:tint="@color/white" />
+
+        <TextView
+            android:id="@+id/txt_vento"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/txt_valor_sensacao_term"
+            android:layout_marginStart="3dp"
+            android:layout_marginTop="15dp"
+            android:layout_marginEnd="3dp"
+            android:layout_marginBottom="3dp"
+            android:layout_toEndOf="@id/img_vento"
+            android:text="@string/txt_vento"
+            android:textSize="16sp" />
+
+
+        <TextView
+            android:id="@+id/txt_valor_vento"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/txt_vento"
+            android:layout_marginStart="3dp"
+            android:layout_marginTop="3dp"
+            android:layout_marginEnd="3dp"
+            android:layout_marginBottom="3dp"
+            android:layout_toEndOf="@id/img_vento"
+            android:text="@string/txt_valor_vento"
+            android:textSize="20sp" />
+
+        <ImageView
+            android:id="@+id/img_vento"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_below="@id/img_umidade"
+            android:layout_marginStart="170dp"
+            android:layout_marginTop="40dp"
+            android:src="@drawable/vento"
+            app:tint="@color/white" />
+
+        <TextView
+            android:id="@+id/txt_pressao"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/txt_valor_umidade"
+            android:layout_marginStart="7dp"
+            android:layout_marginTop="35dp"
+            android:layout_marginEnd="3dp"
+            android:layout_marginBottom="3dp"
+            android:layout_toEndOf="@id/img_pressao"
+            android:text="@string/txt_pressao"
+            android:textSize="16sp" />
+
+
+        <TextView
+            android:id="@+id/txt_valor_pressao"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/txt_pressao"
+            android:layout_marginStart="5dp"
+            android:layout_marginTop="3dp"
+            android:layout_marginEnd="3dp"
+            android:layout_marginBottom="3dp"
+            android:layout_toEndOf="@id/img_pressao"
+            android:text="@string/txt_valor_pressao"
+            android:textSize="20sp" />
+
+    </RelativeLayout>
+
+</RelativeLayout>

@@ -1,0 +1,14 @@
+<resources>
+    <string name="app_name">AppPrevisaoTempo</string>
+    <string name="txt_sensacao_termica">Sensação\nTérmica</string>
+    <string name="txt_valor_sensacao_term">35°</string>
+    <string name="txt_umidade">Umidade</string>
+    <string name="txt_valor_umidade">35°</string>
+    <string name="txt_vento">Vento</string>
+    <string name="txt_valor_vento">10 Km/h</string>
+    <string name="txt_pressao">Pressão</string>
+    <string name="txt_valor_pressao">1080Pha</string>
+    <string name="txt_cidade">Cidade</string>
+    <string name="txt_temperatura">33°</string>
+    <string name="txt_condicao">Nublado</string>
+</resources>
